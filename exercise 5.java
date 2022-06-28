@@ -33,11 +33,16 @@ public class Exercise5 {
         while (numberAttempts < 3) {
             if (wifiPassword.equals("ABC123")) {
                 System.out.println("conectado a la red wifi");
+                break;
             } else {
-                System.out.println("password incorrecta, Funcion equals()");
+                System.out.println("password incorrecta, Password:");
                 wifiPassword = inputDataUser.nextLine();
+                if (numberAttempts == 2) {
+                    System.out.println("*********USUARIO BLOQUEADO*********");
+                }
             }
             numberAttempts += 1;
 
         }
     }
+
